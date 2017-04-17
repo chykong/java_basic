@@ -11,6 +11,7 @@ public class BasicTypeTest {
         System.out.println(a1==b1);
         System.out.println(a2==b2);
 
+
         Integer a3=127,b3=127,a4=128,b4=128;
         System.out.println(a3==b3);
         System.out.println(a4==b4);
@@ -24,5 +25,6 @@ public class BasicTypeTest {
         System.out.print(c3);
         System.out.print(c4);
         System.out.print(c5);
+        System.out.println("测试git");
     }
 }
