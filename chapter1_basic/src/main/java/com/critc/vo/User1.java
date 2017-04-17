@@ -8,6 +8,9 @@ public class User1 {
     private int id;//
     private String pass;
 
+    public User1() {
+    }
+
     public String getName() {
         return name;
     }
