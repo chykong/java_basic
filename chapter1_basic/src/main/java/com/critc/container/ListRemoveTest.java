@@ -27,6 +27,5 @@ public class ListRemoveTest {
             list.remove(str);
             System.out.println("剩余元素:" + list.toString());
         }
-
     }
 }
