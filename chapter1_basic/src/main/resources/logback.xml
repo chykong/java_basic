@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+	<property name="logBase" value="d:\\logs\\" />  
+	<!-- appender -->
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss:SSS}[%-5p][%logger][%-4L] - %m%n
+			</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<!-- 系统日志配置 -->
+	<appender name="sysLogAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logBase}/logback.log</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${logBase}/%d{yyyyMMdd}/logback-%d{yyyyMMdd}.log
+			</FileNamePattern>
+			<maxHistory>365</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<ImmediateFlush>true</ImmediateFlush>
+			<charset>utf-8</charset>
+			<Pattern>[%d{yyyyMMdd HH:mm:ss}] [%-5level] [%-30logger{0}][%-3L]
+				[SeqId:%X{SeqId}] - %m%n</Pattern>
+		</encoder>
+	</appender>
+	
+	<!-- additivity为false不向root控制台输出 -->
+	<logger name="sysLog" additivity="false" level="info">
+		<appender-ref ref="stdout" />
+		<appender-ref ref="sysLogAppender" />
+	</logger>
+	
+	<!-- root 默认日志配置 -->
+	<root level="info">
+		<appender-ref ref="stdout" />
+		<appender-ref ref="sysLogAppender" />     
+	</root>
+</configuration>
