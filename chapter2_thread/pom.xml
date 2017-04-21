@@ -1,17 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java_basic</artifactId>
+        <groupId>com.critc</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.critc</groupId>
-    <artifactId>java_basic</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>chapter1_basic</module>
-        <module>chapter2_thread</module>
-    </modules>
-    <packaging>pom</packaging>
+    <artifactId>chapter2_thread</artifactId>
+    <packaging>jar</packaging>
 
-    <name>java_basic</name>
+    <name>chapter2_thread</name>
     <url>http://maven.apache.org</url>
 
     <properties>
