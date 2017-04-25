@@ -8,6 +8,7 @@
     <modules>
         <module>chapter1_basic</module>
         <module>chapter2_thread</module>
+        <module>chapter3_qrcode</module>
     </modules>
     <packaging>pom</packaging>
 
