@@ -8,9 +8,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>chapter5_web_jstl</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>chapter5_web_jstl Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>../chapter5_web_el</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -30,7 +33,6 @@
             <version>2.0</version>
             <scope>provided</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
