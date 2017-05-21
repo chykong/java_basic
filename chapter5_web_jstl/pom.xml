@@ -4,16 +4,12 @@
         <artifactId>chapter5_web_listener</artifactId>
         <groupId>com.critc</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../chapter5_web_listener/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>chapter5_web_jstl</artifactId>
     <packaging>pom</packaging>
     <name>chapter5_web_jstl Maven Webapp</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>../chapter5_web_el</module>
-    </modules>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
