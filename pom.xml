@@ -11,6 +11,7 @@
         <module>chapter3_qrcode</module>
         <module>chapter4_generic</module>
         <module>chapter5_web_filter</module>
+        <module>chapter5_web_listener</module>
     </modules>
     <packaging>pom</packaging>
 
