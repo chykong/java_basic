@@ -19,6 +19,7 @@ java是一门相对简单的语言，语法非常简单，复杂的都被屏蔽�
 - [14.线程及线程池](http://www.jianshu.com/p/2a100428c9eb)
 - [15.junit单元测试](http://www.jianshu.com/p/300c63665b3c)
 - [16.泛型介绍及泛型类、泛型方法、泛型接口](http://www.jianshu.com/p/d4c00768d776)
+- [17.web开发起步](http://www.jianshu.com/p/44476dd90f31)
 - [17.1JSP原理](http://www.jianshu.com/p/4f5f0e75fc02)
 - [17.2JSP内置对象](http://www.jianshu.com/p/b89e4deb9483)
 - [17.3EL表达式](http://www.jianshu.com/p/0a26c4c6cb11)
