@@ -1,19 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
-        <artifactId>chapter5_web_filter</artifactId>
+        <artifactId>chapter5_web_listener</artifactId>
         <groupId>com.critc</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../chapter5_web_filter/pom.xml</relativePath>
+        <relativePath>../chapter5_web_listener/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>chapter5_web_listener</artifactId>
-    <packaging>pom</packaging>
-    <name>chapter5_web_listener Maven Webapp</name>
+    <artifactId>chapter5_web_jstl</artifactId>
+    <packaging>war</packaging>
+    <name>chapter5_web_jstl Maven Webapp</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>../chapter5_web_jstl</module>
-    </modules>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -21,6 +18,7 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -32,8 +30,15 @@
             <version>2.0</version>
             <scope>provided</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
     </dependencies>
     <build>
-        <finalName>chapter5_web_listener</finalName>
+        <finalName>chapter5_web_jstl</finalName>
     </build>
 </project>
