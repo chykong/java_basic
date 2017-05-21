@@ -7,7 +7,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>chapter5_web_filter</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>chapter5_web_filter Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
