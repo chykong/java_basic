@@ -11,9 +11,6 @@
     <packaging>pom</packaging>
     <name>chapter5_web_listener Maven Webapp</name>
     <url>http://maven.apache.org</url>
-    <modules>
-        <module>../chapter5_web_jstl</module>
-    </modules>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
