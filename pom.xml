@@ -12,6 +12,7 @@
         <module>chapter4_generic</module>
         <module>chapter5_web_filter</module>
         <module>chapter5_web_listener</module>
+        <module>chapter5_web_fn</module>
     </modules>
     <packaging>pom</packaging>
 
