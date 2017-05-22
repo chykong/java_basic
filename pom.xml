@@ -13,6 +13,7 @@
         <module>chapter5_web_filter</module>
         <module>chapter5_web_listener</module>
         <module>chapter5_web_fn</module>
+        <module>chapter6_multidatasource</module>
     </modules>
     <packaging>pom</packaging>
 
