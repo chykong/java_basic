@@ -2,6 +2,7 @@ package com.critc.datasource;
 
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
+import org.apache.commons.dbcp.BasicDataSourceFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +13,8 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -98,6 +101,37 @@ public class DBConnect {
                     logger.error("数据库连接失败");
                     e.printStackTrace();
                 }
+            } else if (dbPool.equalsIgnoreCase("dbcp")) {
+                try {
+                    Hashtable<String, String> map = new Hashtable<String, String>();
+                    map.put("driverClassName", dbProps.getProperty(dbName + ".driverClassName"));
+                    map.put("url", dbProps.getProperty(dbName + ".url"));
+                    map.put("username", dbProps.getProperty(dbName + ".username"));
+                    map.put("password", dbProps.getProperty(dbName + ".password"));
+                    map.put("initialSize", dbProps.getProperty(dbName + ".initialSize"));
+                    map.put("maxActive", dbProps.getProperty(dbName + ".maxActive"));
+
+                    map.put("timeBetweenEvictionRunsMillis", "60000");
+                    map.put("minEvictableIdleTimeMillis", "300000");
+                    map.put("validationQuery", "SELECT 1 FROM DUAL");
+                    map.put("testWhileIdle", "true");
+                    map.put("testOnBorrow", "false");
+                    map.put("testOnReturn", "false");
+                    map.put("removeAbandoned", "true");
+                    map.put("removeAbandonedTimeout", "1800");
+                    map.put("logAbandoned", "true");
+                    Properties properties = new Properties();
+                    Iterator it = map.entrySet().iterator();
+                    while (it.hasNext()) {
+                        Map.Entry entry = (Map.Entry) it.next();
+                        properties.setProperty(entry.getKey().toString(), entry.getValue().toString());
+                    }
+                    dataSource = BasicDataSourceFactory.createDataSource(properties);
+                } catch (Exception e) {
+                    dataSource = null;
+                    logger.error("数据库连接失败");
+                    e.printStackTrace();
+                }
             }
             hmDataSource.put(dbName, dataSource);
         }
@@ -121,13 +155,16 @@ public class DBConnect {
         }
     }
 
-    public static void main(String[] args) {
-        DBConnect dbc = new DBConnect();
-        System.out.println(dbc.getConnection());//连接第一个
-        dbc.close();
-        DBConnect dbc2 = new DBConnect("test2");
-        System.out.println(dbc2.getConnection());//连接第二个
-        dbc2.close();
+    public static void main(String[] args) throws Exception {
+//        DBConnect dbc = new DBConnect();
+//        System.out.println(dbc.getConnection());//连接第一个
+//        dbc.close();
+
+        for (int i = 0; i < 10000; i++) {
+            DBConnect dbc2 = new DBConnect("test2");
+            System.out.println(dbc2.getConnection());//连接第二个
+            dbc2.close();
+        }
     }
 
 }
