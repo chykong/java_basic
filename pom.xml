@@ -10,9 +10,12 @@
         <module>chapter2_thread</module>
         <module>chapter3_qrcode</module>
         <module>chapter4_generic</module>
+        <module>chapter5_web_el</module>
         <module>chapter5_web_filter</module>
         <module>chapter5_web_listener</module>
         <module>chapter5_web_fn</module>
+        <module>chapter5_web_servlet</module>
+        <module>chapter5_web_jstl</module>
         <module>chapter6_multidatasource</module>
     </modules>
     <packaging>pom</packaging>
