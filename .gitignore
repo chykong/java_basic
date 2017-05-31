@@ -23,9 +23,4 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /.idea/
-/chapter1_basic/chapter1_basic.iml
-/java_basic.iml
-/chapter2_thread/chapter2_thread.iml
-/chapter3_qrcode/chapter3_qrcode.iml
-!/chapter3_qrcode/src/main/lib/QRCode.jar
-/chapter4_generic/chapter4_generic.iml
+*.iml
