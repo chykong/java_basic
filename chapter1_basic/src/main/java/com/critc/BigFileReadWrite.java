@@ -50,7 +50,6 @@ public class BigFileReadWrite {
             reader = new BufferedReader(new FileReader(file), 5 * 1024 * 1024);   //如果是读大文件，设置缓存
             String tempString = null;
             while ((tempString = reader.readLine()) != null) {
-                //进行操作.....
                 System.out.println(tempString);
             }
             reader.close();
