@@ -28,3 +28,4 @@ hs_err_pid*
 /chapter2_thread/chapter2_thread.iml
 /chapter3_qrcode/chapter3_qrcode.iml
 !/chapter3_qrcode/src/main/lib/QRCode.jar
+/chapter4_generic/chapter4_generic.iml

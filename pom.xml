@@ -9,6 +9,11 @@
         <module>chapter1_basic</module>
         <module>chapter2_thread</module>
         <module>chapter3_qrcode</module>
+        <module>chapter4_generic</module>
+        <module>chapter5_web_filter</module>
+        <module>chapter5_web_listener</module>
+        <module>chapter5_web_fn</module>
+        <module>chapter6_multidatasource</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -28,8 +33,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.5</source>
+                    <target>1.5</target>
                 </configuration>
             </plugin>
         </plugins>
